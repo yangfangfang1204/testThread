@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	
+</head>
+<body>
+<button type="button" onClick="start()">播放</button>
+<button type="button" onClick="stop()">停止</button>
+<script type="text/javascript" src="testThread.js"></script>
+<script type="text/javascript">
+
+function start()
+{
+     setInterval(()=>{
+	 Module._testThread(); 
+	 Module._stop();
+	 } ,
+	 1000);
+    
+	//Module._stop();
+}
+function stop()
+{
+    Module._stop();
+}
+</script>
+</body>
+
+</html>
